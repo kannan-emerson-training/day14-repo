@@ -15,5 +15,10 @@ namespace SimpleEFConsoleApp.Domain
 
         public string Address { get; set; }
 
+        public override string ToString()
+        {
+            return $"id {this.Id}, name {this.Name} ,address {this.Address}";
+        }
+
     }
 }

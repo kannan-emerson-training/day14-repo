@@ -15,8 +15,11 @@ namespace SimpleEFConsoleApp.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-            options.UseSqlServer(@"Data Source = (localdb)\mssqllocaldb;
-Initial Catalog = myemersondb;Integrated Security = True; TrustServerCertificate = True; MultipleActiveResultSets = true");
+            //options.UseSqlServer(@"Data Source = (localdb)\mssqllocaldb;
+            //Initial Catalog = myemersondb;Integrated Security = True; TrustServerCertificate = True; MultipleActiveResultSets = true");
+
+           // options.UseSqlServer(@"Server=tcp:emersondbcloudserver.database.windows.net,1433;Initial Catalog=emersondbcloud;Persist Security Info=False;User ID=kannan;Password=Az204@123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
         }
     }
+    
 }
