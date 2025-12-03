@@ -1,10 +1,21 @@
+using EmployeeMvcDbApp.Data;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Internal;
+
 var builder = WebApplication.CreateBuilder(args);
 
 
 builder.Services.AddControllersWithViews();
 
-string? con=builder.Configuration.GetConnectionString("local");
-Console.WriteLine(con);
+
+
+string? connectionString=builder.Configuration.GetConnectionString("local");
+Console.WriteLine(connectionString);
+builder.Services.AddDbContext<EmployeeDbContext>
+    (options =>
+{
+    options.UseSqlServer(connectionString);
+});
 
 var app = builder.Build();
 
