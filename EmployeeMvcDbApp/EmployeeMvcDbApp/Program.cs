@@ -11,6 +11,7 @@ builder.Services.AddControllersWithViews();
 
 string? connectionString=builder.Configuration.GetConnectionString("local");
 Console.WriteLine(connectionString);
+
 builder.Services.AddDbContext<EmployeeDbContext>
     (options =>
 {
