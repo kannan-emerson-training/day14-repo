@@ -3,6 +3,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 
+string? con=builder.Configuration.GetConnectionString("local");
+Console.WriteLine(con);
+
 var app = builder.Build();
 
 
